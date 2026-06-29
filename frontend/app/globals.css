@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-elevated: #F1F5F9;
+  --primary: #DC2626;          /* Red alert danger core color */
+  --primary-hover: #B91C1C;
+  --primary-light: #FEF2F2;
+  --accent: #1D4ED8;           /* Trust blue accent */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border: #E2E8F0;
+  --success: #059669;
+  --warning: #D97706;
+  --error: #DC2626;
+  --critical: #7C3AED;
+}
+
+.dark {
+  --bg: #0F172A;
+  --surface: #1E293B;
+  --surface-elevated: #273549;
+  --primary: #EF4444;
+  --primary-hover: #DC2626;
+  --primary-light: #450A0A;
+  --accent: #3B82F6;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #475569;
+  --border: #334155;
+  --success: #34D399;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --critical: #A78BFA;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Micro-animations and effects */
+.glow-primary {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.15);
+}
+
+.dark .glow-primary {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom Grid Pattern for Premium Landing Page background */
+.grid-pattern {
+  background-image: radial-gradient(rgba(220, 38, 38, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .grid-pattern {
+  background-image: radial-gradient(rgba(239, 68, 68, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Critical pulsing animation */
+@keyframes critical-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+    border-color: rgba(220, 38, 38, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.4);
+  }
+}
+
+.animate-pulse-critical {
+  animation: critical-pulse 2s infinite;
+}
