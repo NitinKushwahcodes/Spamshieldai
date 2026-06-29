@@ -20,6 +20,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const isProd = process.env.NODE_ENV === 'production';
 
+// Trust proxy for Render/Vercel load balancers to prevent rate-limit crashes
+app.set('trust proxy', 1);
+
 // ─── SECURITY & MIDDLEWARE ───────────────────────────────────────────────────
 app.use(helmet());
 
