@@ -2,6 +2,7 @@
 
 ScamShield AI is an AI-powered cyber fraud detection and response platform built to protect citizens in India from online scams. In 2023, India lost an estimated ₹1.6 Lakh Crore to cyber fraud. Most victims fail to recover their money due to panic, a lack of clear immediate recovery actions, and difficulty filing official complaints. ScamShield AI solves all of these challenges in one portal.
 
+Live Demo: https://spamshieldaix.vercel.app
 ---
 
 ## Key Features
